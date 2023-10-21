@@ -1,4 +1,5 @@
-%% 复刻ABM的一个案例，居住
+
+%% 复刻ABM的一个案例，居住空间的种族隔离
 
 %% 参数初始化
 MAPSIZE = 150;  %地图大小
@@ -7,8 +8,8 @@ EthicRate = 2.5; %族群1比2的比值
 MAXITER = 100; %最大迭代次数
 
 % 选择的参数，可调
-SAMERATE = 0.4;   %附近居住的同族群人的最低占比，不包含空地
-
+SAMERATE = 0.35;   %附近居住的同族群人的最低占比，不包含空地
+SAMERATE = 0.35;
 
 %% 变量初始化
 map = zeros(MAPSIZE, MAPSIZE);
@@ -54,8 +55,6 @@ while change_count > 10 && MAXITER > 0
                         map(i, j) = 0; map(newi, newj) = 2;
                     end
             end
-
-
         end
     end
     drawMap(map);

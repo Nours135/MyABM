@@ -1,6 +1,6 @@
 %%计算一个坐标的周围邻居中与自己族群相同的人的比例
 function rate = cacuEthicRate(map, loc, race)
-    SearchRange = 3; %考虑左右各多少个格子距离
+    SearchRange = 2; %考虑左右各多少个格子距离
 
     maxSize = size(map);
     same = 0; diff = 0;
